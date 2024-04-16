@@ -40,4 +40,34 @@ function DownloadAllAPIPages($url, $char_id) {
   return $pages;
 }
 
+function FetchAllEntries($query) {
+    global $conn;
+    $r = array();
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_assoc()) {
+        array_push($r, $row);
+    }
+    return $r;
+}
+
+function FetchAllEntriesByKey($query, $key) {
+  global $conn;
+  $r = array();
+  $stmt = $conn->prepare($query);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  while ($row = $result->fetch_assoc()) {
+    $r[$row[$key]] = $row;
+  }
+  return $r;
+}
+
+function ExecuteQuery($query) {
+  global $conn;
+  $stmt = $conn->prepare($query);
+  $stmt->execute();
+}
+
 ?>
