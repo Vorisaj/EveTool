@@ -142,7 +142,6 @@ function DownloadSingleAPIPage($url, $char_id) {
             echo "[DownloadSingleAPIPage] Token refresh error!";
             return FALSE;
           }
-
         }
         if (strpos($json->error, "Undefined 404 response") === false && $json->error != "Requested page does not exist!") {
             if (strpos($json->error, "ConStopSpamming") !== false) {
