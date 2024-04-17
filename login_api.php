@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "functions.php";
+require "lib/functions.php";
 
 if (isset($_POST["login"])) {
     if (!isset($_POST["username"]) || !isset($_POST["password"])) {
@@ -43,6 +43,7 @@ function local_login($username, $password) {
     $ar = $result->fetch_assoc();
     $passwordhash = hash('sha256',$ar["salt"].hash('sha256',$password));
     if ($passwordhash == $ar["passwordhash"]) {
+        $_SESSION["isAdmin"] = $ar["is_admin"];
         return $ar["id"];
     } else {
         return -1;

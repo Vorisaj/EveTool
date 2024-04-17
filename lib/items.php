@@ -5,23 +5,6 @@ $ItemVolumes = array();
 $ItemNames = array();
 $ItemIDs = array();
 
-LoadItemVolumes();
-
-function LoadItemVolumes() {
-  global $ItemVolumes;
-  global $conn;
-  if (isset($ItemVolumes[0])) {
-      return;
-  }
-  $ItemVolumes[0] = 0;
-  $stmt = $conn->prepare("SELECT * FROM volumes");
-  $stmt->execute();
-  $result = $stmt->get_result();
-  while ($row = $result->fetch_assoc()) {
-      $ItemVolumes[$row["type_id"]] = $row["volume"];
-  }
-}
-
 function GetVolumeOf($type_id) {
   global $ItemVolumes;
   //Check if it is cached

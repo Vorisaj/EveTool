@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-feature-settings: 'tnum';
+    line-height: 1.5715;
+    background: black;
+}
+
+.layout-header {
+    height: 64px;
+    padding: 0 50px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 64px;
+    background: #1f1f1f;
+}
+
+.card {
+    box-sizing: border-box;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    background: #141414;
+    border-radius: 2px;
+    border: 1px solid #303030;
+    padding: 24px;
+}
+
+.layout-content {
+    flex: auto;
+    min-height: 0;
+}
+
+.container {
+    max-width: 992px;
+    min-width: 480px;
+    padding: 24px 24px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+table {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-feature-settings: 'tnum';
+}
+
+textarea {
+    box-sizing: border-box;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding: 4px 11px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: transparent;
+    background-image: none;
+    transition: all 0.3s;
+    display: inline-block;
+    width: 90px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #434343;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    padding: 0 11px;
+    text-align: left;
+    background-color: transparent;
+    border-radius: 2px;
+    transition: all 0.3s linear;
+    appearance: textfield !important;
+}
+
+textarea:hover {
+    border-color: #1a7256;
+    border-right-width: 1px;
+}
+
+input {
+    box-sizing: border-box;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    padding: 4px 11px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: transparent;
+    background-image: none;
+    transition: all 0.3s;
+    display: inline-block;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #434343;
+    border-radius: 2px;
+    height: 30px;
+    padding: 0 11px;
+    text-align: left;
+    background-color: transparent;
+    border-radius: 2px;
+    transition: all 0.3s linear;
+    appearance: textfield !important;
+}
+
+input:hover {
+    border-color: #1a7256;
+    border-right-width: 1px;
+}
+
+.select-options {
+    display: none;
+}
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+
+.select-styled {
+    box-sizing: border-box;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding: 4px 11px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: transparent;
+    background-image: none;
+    transition: all 0.3s;
+    display: inline-block;
+    width: 90px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #434343;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    padding: 0 11px;
+    text-align: left;
+    background-color: transparent;
+    border-radius: 2px;
+    transition: all 0.3s linear;
+    appearance: textfield !important;
+    cursor: pointer;
+}
+
+.select-styled:hover {
+    border-color: #1a7256;
+    border-right-width: 1px;
+}
+
+.is-selected {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    background-color: #121e1b;
+}
+
+li {
+    position: relative;
+    display: block;
+    min-height: 14px;
+    padding: 3px 3px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+li:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 0px;
+    color: rgba(255, 255, 255, 0.85);
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    z-index: 1050;
+    box-sizing: border-box;
+    padding: 0px 0px;
+    overflow: hidden;
+    font-size: 14px;
+    font-variant: initial;
+    background-color: #1f1f1f;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+}
+
+.multi-select {
+    color: white;
+    background-color: black;
+}
+
+.select {
+    position: relative;
+    width: 180px;
+}
+
+a:link{
+    text-decoration: underline !important;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.button {
+    width: auto;
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    user-select: none;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.85);
+    border-color: #434343;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    color: #1a7256;
+    border-color: #1a7256;
+    background: transparent;
+}
+
+.form-table td {
+    padding-bottom: 1em;
+    }
+
+.normal-table {
+    border-collapse: collapse;
+}
+
+.normal-table table{
+    border-collapse: collapse;
+}
+
+.normal-table td {
+    padding: 4px;
+    border: 1px solid #303030;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.85);
+}

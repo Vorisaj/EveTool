@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli($_ENV["EVE_DB_IP"], $_ENV["EVE_DB_USER"], $_ENV["EVE_DB_PASSWORD"], "eve");
+$conn = new mysqli(getenv("EVE_DB_IP"), getenv("EVE_DB_USER"), getenv("EVE_DB_PASSWORD"), "eve");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }

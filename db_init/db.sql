@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `expires` datetime DEFAULT NULL,
   `token` varchar(2000) DEFAULT NULL,
   `refresh_token` varchar(50) DEFAULT NULL,
+  `is_full_scope` tinyint(1) DEFAULT 0;
   PRIMARY KEY (`char_id`)
 );
 
@@ -28,6 +29,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `passwordhash` varchar(64) NOT NULL,
   `salt` varchar(5) NOT NULL,
   `email` varchar(50) DEFAULT '',
-  `is_admin` tinyint(1) DEFAULT NULL,
+  `is_admin` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`id`)
 );
